@@ -21,8 +21,8 @@ class PageIndicator extends StatelessWidget {
                 width: i == currentIndex ? 24 : 8,
                 margin: const EdgeInsets.all(2),
                 decoration: BoxDecoration(
-                  color: Colors.deepOrange
-                      .withOpacity(i == currentIndex ? 1.0 : 0.4),
+                  color:
+                      Colors.orange.withOpacity(i == currentIndex ? 1.0 : 0.4),
                   borderRadius: BorderRadius.all(Radius.circular(4)),
                 ),
               );

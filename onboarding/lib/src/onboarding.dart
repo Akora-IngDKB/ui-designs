@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding/src/bottom_notch_clipper.dart';
 import 'package:onboarding/src/onboarding_item.dart';
 import 'package:onboarding/src/onboarding_model.dart';
 import 'package:onboarding/src/page_indicator.dart';
@@ -40,6 +41,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -52,6 +55,20 @@ class _OnboardingPageState extends State<OnboardingPage> {
               items[index],
               index: index,
               isLast: index == items.length - 1,
+            ),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            top: size.height * 0.703,
+            child: CircleAvatar(
+              radius: 28,
+              backgroundColor: Colors.orange,
+              child: Icon(
+                Icons.fast_forward_outlined,
+                size: 40,
+                color: Colors.white.withOpacity(0.85),
+              ),
             ),
           ),
           Positioned(
@@ -77,16 +94,20 @@ class _OnboardingBackground extends StatelessWidget {
       color: Colors.indigoAccent,
       child: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(50),
-              bottomRight: Radius.circular(50),
-            ),
-            child: Container(
-              width: size.width,
-              height: size.height * 0.75,
-              color: Color(0xFFEEEEF9),
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+          ClipPath(
+            clipper: BottomNotchClipper(),
+            child: ClipRRect(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(50),
+                bottomRight: Radius.circular(50),
+              ),
+              child: Container(
+                width: size.width,
+                height: size.height * 0.75,
+                color: Color(0xFFEEEEF9),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+              ),
             ),
           ),
           Container(
