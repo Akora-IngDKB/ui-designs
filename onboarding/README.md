@@ -1,16 +1,15 @@
-# onboarding
+# Onboarding UI  
 
-A new Flutter project.
+A mobile app onboarding concept cloned with Flutter.  
+[Original Design on Uplabs](https://www.uplabs.com/posts/nature-landing-page-design) by [CMARIX TechnoLabs](https://www.uplabs.com/cmarixtechnolabs)  
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+| Screen 1 | Screen 2 | Screen 3 |
+| --- | --- | --- |
+| <img src="assets/shots/screen-1.png"> | <img src="assets/shots/screen-2.png"> | <img src="assets/shots/screen-3.png"> |
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Made with :heart_eyes: by [Akora-IngDKB](https://github.com/Akora-IngDKB).  
+Follow me on [Twitter](https://twitter.com/Akora_IngDKB) and [Instagram](https://www.instagram.com/akora_ingdkb/)   
+Please show some :heart: by giving this repo as :star: as I will be updating it with time.  
