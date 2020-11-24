@@ -1,7 +1,6 @@
 # Social App UI  
 
-A simple Social UI concept cloned with Flutter.  
-Original Design on Dribbble by [Outcrowd](https://dribbble.com/outcrowd).  
+A simple Social UI concept cloned with Flutter.   
  
 ## Screenshots
 
@@ -10,6 +9,7 @@ Original Design on Dribbble by [Outcrowd](https://dribbble.com/outcrowd).
 | <img src="assets/shots/feed.png"> | <img src="assets/shots/noti.png"> |
 
 ### Original Design
+Original Design on Dribbble by [Outcrowd](https://dribbble.com/outcrowd).  
 <img src="assets/shots/original_design.png">
 
 <br>
