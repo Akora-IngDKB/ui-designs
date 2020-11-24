@@ -32,7 +32,7 @@ class PageIndicator extends StatelessWidget {
             Text(
               'Skip',
               style: TextStyle(
-                color: Colors.deepPurple,
+                color: Colors.indigoAccent,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
               ),

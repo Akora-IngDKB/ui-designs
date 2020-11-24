@@ -74,7 +74,7 @@ class _OnboardingBackground extends StatelessWidget {
     return Container(
       height: size.height,
       width: size.width,
-      color: Colors.deepPurple,
+      color: Colors.indigoAccent,
       child: Column(
         children: [
           ClipRRect(
@@ -85,7 +85,7 @@ class _OnboardingBackground extends StatelessWidget {
             child: Container(
               width: size.width,
               height: size.height * 0.75,
-              color: Colors.white.withOpacity(0.93),
+              color: Color(0xFFEEEEF9),
               padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
             ),
           ),

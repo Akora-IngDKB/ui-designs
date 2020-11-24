@@ -69,7 +69,7 @@ class OnboardingItem extends StatelessWidget {
                 ),
                 child: Text(
                   isLast ? 'Get Started' : 'Sign Up',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 onPressed: () {},
               ),
