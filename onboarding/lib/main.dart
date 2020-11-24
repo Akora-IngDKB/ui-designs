@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Onboarding Design',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Quicksand',
         primarySwatch: Colors.deepPurple,
       ),
       home: OnboardingPage(),

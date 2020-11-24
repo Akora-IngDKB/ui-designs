@@ -28,7 +28,7 @@ class OnboardingItem extends StatelessWidget {
               width: size.width,
               height: size.height * 0.75,
               color: Colors.white.withOpacity(0.93),
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
               child: SafeArea(
                 child: Column(
                   children: [
@@ -42,6 +42,7 @@ class OnboardingItem extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.deepPurple,
                               fontSize: 18,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                       ],
@@ -56,11 +57,11 @@ class OnboardingItem extends StatelessWidget {
                     Text(
                       model.title,
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 32,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 36),
+                    SizedBox(height: 28),
                     Text(
                       model.description,
                       textAlign: TextAlign.center,
@@ -89,7 +90,7 @@ class OnboardingItem extends StatelessWidget {
                 ),
                 child: Text(
                   isLast ? 'Get Started' : 'Sign Up',
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
                 onPressed: () {},
               ),
