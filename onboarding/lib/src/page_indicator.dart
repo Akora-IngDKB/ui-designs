@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 class PageIndicator extends StatelessWidget {
   final int currentIndex;
   final int itemCount;
+  final VoidCallback onSkipClicked;
 
-  const PageIndicator(this.currentIndex, {this.itemCount = 3});
+  const PageIndicator(
+    this.currentIndex, {
+    this.itemCount = 3,
+    this.onSkipClicked,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +34,15 @@ class PageIndicator extends StatelessWidget {
             }),
           ),
           if (currentIndex != itemCount - 1)
-            Text(
-              'Skip',
-              style: TextStyle(
-                color: Colors.indigoAccent,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
+            GestureDetector(
+              onTap: onSkipClicked,
+              child: Text(
+                'Skip',
+                style: TextStyle(
+                  color: Colors.indigoAccent,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
         ],

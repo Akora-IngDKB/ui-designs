@@ -10,6 +10,7 @@ class OnboardingPage extends StatefulWidget {
 }
 
 class _OnboardingPageState extends State<OnboardingPage> {
+  final pageController = PageController();
   int currentIndex = 0;
 
   final items = [
@@ -39,6 +40,31 @@ class _OnboardingPageState extends State<OnboardingPage> {
     });
   }
 
+  void onGoToNext() {
+    pageController.nextPage(
+      curve: Curves.easeInOut,
+      duration: kThemeAnimationDuration,
+    );
+
+    if (currentIndex < items.length - 1) {
+      setState(() {
+        currentIndex++;
+      });
+    }
+  }
+
+  void onSkipClicked() {
+    setState(() {
+      currentIndex = items.length - 1;
+    });
+
+    pageController.animateToPage(
+      currentIndex,
+      curve: Curves.easeInOut,
+      duration: kThemeAnimationDuration,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -49,6 +75,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
         children: [
           _OnboardingBackground(),
           PageView.builder(
+            controller: pageController,
             onPageChanged: onPageChanged,
             itemCount: items.length,
             itemBuilder: (context, index) => OnboardingItem(
@@ -61,13 +88,16 @@ class _OnboardingPageState extends State<OnboardingPage> {
             left: 0,
             right: 0,
             top: size.height * 0.703,
-            child: CircleAvatar(
-              radius: 28,
-              backgroundColor: Colors.orange,
-              child: Icon(
-                Icons.fast_forward_outlined,
-                size: 40,
-                color: Colors.white.withOpacity(0.85),
+            child: GestureDetector(
+              onTap: onGoToNext,
+              child: CircleAvatar(
+                radius: 28,
+                backgroundColor: Colors.orange,
+                child: Icon(
+                  Icons.fast_forward_outlined,
+                  size: 40,
+                  color: Colors.white.withOpacity(0.85),
+                ),
               ),
             ),
           ),
@@ -75,7 +105,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
             top: 12,
             left: 24,
             right: 24,
-            child: PageIndicator(currentIndex, itemCount: items.length),
+            child: PageIndicator(
+              currentIndex,
+              itemCount: items.length,
+              onSkipClicked: onSkipClicked,
+            ),
           ),
         ],
       ),
