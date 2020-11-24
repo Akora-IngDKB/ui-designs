@@ -8,21 +8,37 @@ class PageIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: List<Widget>.generate(itemCount, (i) {
-        return Container(
-          height: 8,
-          width: i == currentIndex ? 24 : 8,
-          margin: const EdgeInsets.all(2),
-          decoration: BoxDecoration(
-            shape: i == currentIndex ? BoxShape.rectangle : BoxShape.circle,
-            color: Colors.deepOrange.withOpacity(i == currentIndex ? 1.0 : 0.4),
-            borderRadius:
-                i == currentIndex ? BorderRadius.all(Radius.circular(4)) : null,
+    return SafeArea(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: List<Widget>.generate(itemCount, (i) {
+              return AnimatedContainer(
+                duration: kThemeAnimationDuration,
+                height: 8,
+                width: i == currentIndex ? 24 : 8,
+                margin: const EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                  color: Colors.deepOrange
+                      .withOpacity(i == currentIndex ? 1.0 : 0.4),
+                  borderRadius: BorderRadius.all(Radius.circular(4)),
+                ),
+              );
+            }),
           ),
-        );
-      }),
+          if (currentIndex != itemCount - 1)
+            Text(
+              'Skip',
+              style: TextStyle(
+                color: Colors.deepPurple,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+        ],
+      ),
     );
   }
 }

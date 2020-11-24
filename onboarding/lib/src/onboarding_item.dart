@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding/src/onboarding_model.dart';
-import 'package:onboarding/src/page_indicator.dart';
 
 class OnboardingItem extends StatelessWidget {
   final OnboardingModel model;
@@ -16,7 +15,6 @@ class OnboardingItem extends StatelessWidget {
     return Container(
       height: size.height,
       width: size.width,
-      color: Colors.deepPurple,
       child: Column(
         children: [
           ClipRRect(
@@ -27,27 +25,10 @@ class OnboardingItem extends StatelessWidget {
             child: Container(
               width: size.width,
               height: size.height * 0.75,
-              color: Colors.white.withOpacity(0.93),
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
               child: SafeArea(
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        PageIndicator(index),
-                        if (!isLast)
-                          Text(
-                            'Skip',
-                            style: TextStyle(
-                              color: Colors.deepPurple,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                      ],
-                    ),
-                    SizedBox(height: 36),
                     Expanded(
                       child: Image.asset(
                         model.image,
@@ -56,8 +37,9 @@ class OnboardingItem extends StatelessWidget {
                     ),
                     Text(
                       model.title,
+                      textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 32,
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -65,10 +47,7 @@ class OnboardingItem extends StatelessWidget {
                     Text(
                       model.description,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w300,
-                      ),
+                      style: TextStyle(fontSize: 18),
                     ),
                     SizedBox(height: size.height * 0.75 * 0.12),
                   ],
