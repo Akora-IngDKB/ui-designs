@@ -6,7 +6,7 @@ A mobile app onboarding concept cloned with Flutter.
 ## Screenshots
 
 | Screen 1 | Screen 2 | Screen 3 |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | <img src="assets/shots/screen-1.png"> | <img src="assets/shots/screen-2.png"> | <img src="assets/shots/screen-3.png"> |
 
 

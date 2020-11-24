@@ -3,6 +3,7 @@ This repo contains UI Designs from popular inspiration websites that I have clon
 
 ## Content
 1. [Onboarding](https://github.com/Akora-IngDKB/ui-designs/tree/master/onboarding)
+2. [Social App](https://github.com/Akora-IngDKB/ui-designs/tree/master/social_app)
 
 <br>
 <hr>
