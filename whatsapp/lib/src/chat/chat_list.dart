@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp/src/chat/conversation.dart';
 import 'package:whatsapp/src/models/user.dart';
+import 'package:whatsapp/src/utils/data.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
 
 class ChatList extends StatelessWidget {
@@ -56,7 +57,11 @@ class ChatList extends StatelessWidget {
               ),
             );
           },
-          subtitle: Text('Some subtitle message bi like that.'),
+          subtitle: Text(
+            MESSAGES[i % MESSAGES.length].message,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
           trailing: trailing,
         );
       },
