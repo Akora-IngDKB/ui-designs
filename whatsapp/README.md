@@ -27,6 +27,10 @@ WhatsApp UI Concept built with Flutter.
 | :---: |
 | <img src="assets/shots/whatsapp_web.png"> |
 
+### Original Design
+Original Design on [Uplabs by Debangsu Basu](https://www.uplabs.com/posts/whatsapp-redesign-a-concept).  
+<img src="assets/shots/original_design.png">
+
 
 <br>
 <hr>
