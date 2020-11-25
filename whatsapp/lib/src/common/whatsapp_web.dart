@@ -75,8 +75,9 @@ class WhatsAppWebScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Expanded(
+            Flexible(
               child: ListView(
+                shrinkWrap: true,
                 padding: EdgeInsets.symmetric(horizontal: 50),
                 children: [
                   ListTile(
@@ -106,6 +107,16 @@ class WhatsAppWebScreen extends StatelessWidget {
                 ],
               ),
             ),
+            OutlineButton.icon(
+              icon: Icon(Icons.power_settings_new_outlined, color: GREEN_COLOR),
+              label: Text(
+                'Logout from all devices',
+                style: TextStyle(color: GREEN_COLOR),
+              ),
+              onPressed: () {},
+              shape: StadiumBorder(),
+            ),
+            SizedBox(height: 16),
           ],
         ),
       ),
