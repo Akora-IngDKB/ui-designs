@@ -165,15 +165,6 @@ class _CallControls extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         SizedBox(height: 16),
-        FloatingActionButton(
-          child: Icon(Icons.call_end_outlined),
-          backgroundColor: Colors.red,
-          heroTag: Key('end-call'),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        SizedBox(height: 16),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -205,6 +196,15 @@ class _CallControls extends StatelessWidget {
               onPressed: () {},
             ),
           ],
+        ),
+        SizedBox(height: 24),
+        FloatingActionButton(
+          child: Icon(Icons.call_end_outlined),
+          backgroundColor: Colors.red,
+          heroTag: Key('end-call'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ],
     );

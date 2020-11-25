@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class CallTimer extends StatefulWidget {
   final Color textColor;
 
-  CallTimer({this.textColor = Colors.white});
+  const CallTimer({this.textColor = Colors.white});
 
   @override
   _CallTimerState createState() => _CallTimerState();
