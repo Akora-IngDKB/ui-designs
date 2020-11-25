@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:whatsapp/src/chat/conversation.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
 import 'package:whatsapp/src/utils/user.dart';
 
@@ -40,6 +42,13 @@ class ChatList extends StatelessWidget {
             users[i].name,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
+          onTap: () {
+            Navigator.of(context).push(
+              CupertinoPageRoute(
+                builder: (_) => ConversationScreen(users[i]),
+              ),
+            );
+          },
           subtitle: Text('Some subtitle message bi like that.'),
           trailing: trailing,
         );
