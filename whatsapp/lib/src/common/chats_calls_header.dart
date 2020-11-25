@@ -37,6 +37,7 @@ class _HeaderItem extends StatelessWidget {
               style: TextStyle(
                 letterSpacing: 2,
                 fontSize: 20,
+                fontFamily: 'Montserrat',
                 fontWeight: FontWeight.w500,
                 color: isSelected ? GREEN_COLOR : Colors.grey,
               ),

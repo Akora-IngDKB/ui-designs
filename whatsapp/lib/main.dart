@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'WhatsApp',
       theme: ThemeData(
-        primaryColor: Colors.white,
-        appBarTheme: AppBarTheme(iconTheme: IconThemeData(color: GREEN_COLOR)),
-        scaffoldBackgroundColor: Colors.white,
-      ),
+          primaryColor: Colors.white,
+          appBarTheme:
+              AppBarTheme(iconTheme: IconThemeData(color: GREEN_COLOR)),
+          scaffoldBackgroundColor: Colors.white,
+          fontFamily: 'Montserrat'),
       home: Homepage(title: 'WhatsApp'),
     );
   }
