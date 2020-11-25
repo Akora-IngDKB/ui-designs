@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/src/status/dashed_circle.dart';
+import 'package:whatsapp/src/utils/data.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
 import 'package:whatsapp/src/utils/user.dart';
 
@@ -26,9 +27,7 @@ class StatusList extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(width: 16),
-            _StatusItem(
-              User(name: 'You', image: 'assets/images/me.jpg', statusCount: 2),
-            ),
+            _StatusItem(CURRENT_USER),
             _VerticalDivider(),
             SizedBox(width: 16),
             Expanded(
@@ -77,7 +76,7 @@ class _StatusItem extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              user.name,
+              user.name.split(' ')[0],
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
           ],

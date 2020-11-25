@@ -3,5 +3,5 @@ class User {
   final String image;
   final int statusCount;
 
-  User({this.name, this.image, this.statusCount = 4});
+  const User({this.name, this.image, this.statusCount = 4});
 }

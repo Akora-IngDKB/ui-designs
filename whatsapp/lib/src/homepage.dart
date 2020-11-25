@@ -4,8 +4,8 @@ import 'package:whatsapp/src/chat/chat_list.dart';
 import 'package:whatsapp/src/chat/chats_calls_header.dart';
 import 'package:whatsapp/src/common/appbar.dart';
 import 'package:whatsapp/src/status/status.dart';
+import 'package:whatsapp/src/utils/data.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
-import 'package:whatsapp/src/utils/user.dart';
 
 class Homepage extends StatefulWidget {
   Homepage({Key key, this.title}) : super(key: key);
@@ -19,10 +19,6 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   int currentIndex = 0;
 
-  final users = List<User>.generate(8, (i) {
-    return User(name: 'DKB', image: 'assets/images/girl.jpg');
-  });
-
   void onPageChanged(int index) {
     setState(() {
       currentIndex = index;
@@ -32,18 +28,18 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     final pages = [
-      ChatList(users),
-      Calls(users),
+      ChatList(ALL_USERS),
+      Calls(ALL_USERS),
     ];
 
     return Scaffold(
       appBar: CustomAppBar(),
       body: Column(
         children: <Widget>[
-          StatusList(users),
-          SizedBox(height: 30),
+          StatusList(ALL_USERS),
+          SizedBox(height: 24),
           ChatCallHeader(isChatSelected: currentIndex == 0),
-          SizedBox(height: 30),
+          SizedBox(height: 24),
           Expanded(
             child: PageView.builder(
               onPageChanged: onPageChanged,

@@ -19,8 +19,6 @@ class ChatList extends StatelessWidget {
         if (isSent) {
           trailing = Icon(Icons.check, color: Colors.grey);
         } else if (isRead) {
-          trailing = Icon(Icons.done_all, color: Colors.blue);
-        } else {
           trailing = CircleAvatar(
             radius: 12,
             backgroundColor: GREEN_COLOR,
@@ -29,6 +27,8 @@ class ChatList extends StatelessWidget {
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
             ),
           );
+        } else {
+          trailing = Icon(Icons.done_all, color: Colors.blue);
         }
 
         return ListTile(
