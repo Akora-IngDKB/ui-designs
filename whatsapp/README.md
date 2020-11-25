@@ -1,16 +1,36 @@
-# whatsapp
+# WhatsApp UI
 
-A new Flutter project.
+WhatsApp UI Concept built with Flutter.
 
-## Getting Started
+## Screenshots
+| Chats | Calls |
+| :---: | :---: |
+| <img src="assets/shots/chats.png"> | <img src="assets/shots/calls.png"> |
 
-This project is a starting point for a Flutter application.
+| New Chat | Conversation |
+| :---: | :---: |
+| <img src="assets/shots/new_chat.png"> | <img src="assets/shots/convo.png"> |
 
-A few resources to get you started if this is your first Flutter project:
+| Incoming Voice Call | Conversation |
+| :---: | :---: |
+| <img src="assets/shots/incoming_voice_call.png"> | <img src="assets/shots/ongoing_voice_call.png"> |
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+| Video Call (With Controls) | Video Call (Without Controls) |
+| :---: | :---: |
+| <img src="assets/shots/video_call_controls.png"> | <img src="assets/shots/video_call_no_controls.png"> |
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Settings | Profile |
+| :---: | :---: |
+| <img src="assets/shots/settings.png"> | <img src="assets/shots/profile.png"> |
+
+| WhatsApp Web |
+| :---: |
+| <img src="assets/shots/whatsapp_web.png"> |
+
+
+<br>
+<hr>
+
+Made with :heart_eyes: by [Akora-IngDKB](https://github.com/Akora-IngDKB).  
+Follow me on [Twitter](https://twitter.com/Akora_IngDKB) and [Instagram](https://www.instagram.com/akora_ingdkb/).     
+Please show some :heart: by giving this repo as :star: as I will be updating it with time.  
