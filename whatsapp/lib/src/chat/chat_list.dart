@@ -38,9 +38,12 @@ class ChatList extends StatelessWidget {
         }
 
         return ListTile(
-          leading: CircleAvatar(
-            backgroundImage: AssetImage(users[i].image),
-            radius: 25,
+          leading: Hero(
+            tag: Key(users[i].image),
+            child: CircleAvatar(
+              backgroundImage: AssetImage(users[i].image),
+              radius: 25,
+            ),
           ),
           title: Text(
             users[i].name,

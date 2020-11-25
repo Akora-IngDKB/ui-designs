@@ -16,13 +16,16 @@ class ConvAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: Row(
         children: [
           IconButton(
-            icon: Icon(Icons.arrow_back_ios),
+            icon: Icon(Icons.arrow_back_ios, color: GREEN_COLOR),
             onPressed: () {
               Navigator.pop(context);
             },
           ),
-          CircleAvatar(
-            backgroundImage: AssetImage(user.image),
+          Hero(
+            tag: Key(user.image),
+            child: CircleAvatar(
+              backgroundImage: AssetImage(user.image),
+            ),
           ),
           SizedBox(width: 24),
           Column(

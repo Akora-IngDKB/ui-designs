@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/src/homepage.dart';
+import 'package:whatsapp/src/utils/theme_values.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'WhatsApp',
       theme: ThemeData(
         primaryColor: Colors.white,
+        appBarTheme: AppBarTheme(iconTheme: IconThemeData(color: GREEN_COLOR)),
         scaffoldBackgroundColor: Colors.white,
       ),
       home: Homepage(title: 'WhatsApp'),
