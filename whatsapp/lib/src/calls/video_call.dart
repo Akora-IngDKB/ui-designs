@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:whatsapp/src/calls/call_timer.dart';
+import 'package:whatsapp/src/models/user.dart';
 import 'package:whatsapp/src/utils/data.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
-import 'package:whatsapp/src/utils/user.dart';
 
 class VideoCallScreen extends StatefulWidget {
   final User user;

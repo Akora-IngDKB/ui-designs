@@ -3,9 +3,9 @@ import 'dart:math';
 import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp/src/chat/conv_app_bar.dart';
+import 'package:whatsapp/src/models/user.dart';
 import 'package:whatsapp/src/utils/data.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
-import 'package:whatsapp/src/utils/user.dart';
 
 class ConversationScreen extends StatelessWidget {
   final User user;

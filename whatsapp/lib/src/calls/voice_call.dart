@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/src/models/user.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
-import 'package:whatsapp/src/utils/user.dart';
 
 import 'call_timer.dart';
 

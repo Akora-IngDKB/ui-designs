@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/src/models/user.dart';
 import 'package:whatsapp/src/status/dashed_circle.dart';
 import 'package:whatsapp/src/utils/data.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
-import 'package:whatsapp/src/utils/user.dart';
 
 class StatusList extends StatelessWidget {
   final List<User> users;

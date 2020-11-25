@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:whatsapp/src/utils/message.dart';
-import 'package:whatsapp/src/utils/user.dart';
+import 'package:whatsapp/src/models/message.dart';
+import 'package:whatsapp/src/models/user.dart';
 
 final random = Random(TimeOfDay.now().hour);
 

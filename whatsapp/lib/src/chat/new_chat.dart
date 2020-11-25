@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp/src/chat/conversation.dart';
+import 'package:whatsapp/src/models/user.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
-import 'package:whatsapp/src/utils/user.dart';
 
 class NewChatScreen extends StatelessWidget {
   final List<User> users;
