@@ -127,13 +127,14 @@ class _NameToolbar extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  'WHATSAPP VIDEO CALL',
+                  'WhatsApp Video Call',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     fontSize: 20,
                   ),
                 ),
+                SizedBox(height: 5),
                 Text(
                   user.name,
                   style: TextStyle(
@@ -142,6 +143,7 @@ class _NameToolbar extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
+                SizedBox(height: 3),
                 CallTimer(),
               ],
             ),

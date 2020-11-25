@@ -20,7 +20,7 @@ class _VoiceCallScreenState extends State<VoiceCallScreen> {
     return [
       TextButton.icon(
         label: Text(
-          'INCOMING CALL',
+          'Incoming call',
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 20,
@@ -48,7 +48,7 @@ class _VoiceCallScreenState extends State<VoiceCallScreen> {
       ),
       SizedBox(height: 36),
       Text(
-        'TAP TO ANSWER',
+        'Tap to answer',
         style: TextStyle(
           fontWeight: FontWeight.w500,
           fontSize: 20,
@@ -69,7 +69,7 @@ class _VoiceCallScreenState extends State<VoiceCallScreen> {
       CallTimer(textColor: Colors.grey),
       Spacer(),
       Text(
-        'ON-GOING CALL',
+        'On-going call',
         style: TextStyle(
           fontWeight: FontWeight.w500,
           fontSize: 20,
@@ -137,7 +137,7 @@ class _VoiceCallScreenState extends State<VoiceCallScreen> {
               )
             : null,
         title: Text(
-          'WHATSAPP VOICE CALL',
+          'WhatsApp Voice Call',
           textAlign: TextAlign.center,
           style: TextStyle(
             fontWeight: FontWeight.bold,

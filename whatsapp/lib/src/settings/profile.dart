@@ -56,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
               'Name',
               style: TextStyle(
                 fontWeight: FontWeight.normal,
-                color: Colors.grey,
+                color: Colors.black54,
               ),
             ),
             subtitle: Column(
@@ -87,7 +87,7 @@ class ProfileScreen extends StatelessWidget {
               'About',
               style: TextStyle(
                 fontWeight: FontWeight.normal,
-                color: Colors.grey,
+                color: Colors.black54,
               ),
             ),
             subtitle: Text(
@@ -107,7 +107,7 @@ class ProfileScreen extends StatelessWidget {
               'Phone',
               style: TextStyle(
                 fontWeight: FontWeight.normal,
-                color: Colors.grey,
+                color: Colors.black54,
               ),
             ),
             subtitle: Text(

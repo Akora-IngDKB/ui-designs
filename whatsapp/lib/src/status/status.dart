@@ -15,7 +15,7 @@ class StatusList extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          'STATUS',
+          'Status',
           style: TextStyle(
             color: GREEN_COLOR,
             fontWeight: FontWeight.w500,
