@@ -167,7 +167,9 @@ class _CallControls extends StatelessWidget {
           child: Icon(Icons.call_end_outlined),
           backgroundColor: Colors.red,
           heroTag: Key('end-call'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         SizedBox(height: 16),
         Row(

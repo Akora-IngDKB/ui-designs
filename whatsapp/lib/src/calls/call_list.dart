@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:whatsapp/src/calls/video_call.dart';
+import 'package:whatsapp/src/calls/voice_call.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
 import 'package:whatsapp/src/utils/user.dart';
 
@@ -53,9 +56,20 @@ class Calls extends StatelessWidget {
               Text('25 November 2020, 00:00am'),
             ],
           ),
-          trailing: Icon(
-            isFirst ? Icons.videocam_outlined : Icons.phone_outlined,
-            color: GREEN_COLOR,
+          trailing: IconButton(
+            icon: Icon(
+              isFirst ? Icons.videocam_outlined : Icons.phone_outlined,
+              color: GREEN_COLOR,
+            ),
+            onPressed: () {
+              Navigator.of(context).push(
+                CupertinoPageRoute(
+                  builder: (_) => isFirst
+                      ? VideoCallScreen(users[i])
+                      : VoiceCallScreen(users[i]),
+                ),
+              );
+            },
           ),
         );
       },

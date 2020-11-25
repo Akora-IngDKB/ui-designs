@@ -26,7 +26,11 @@ class ChatList extends StatelessWidget {
             backgroundColor: GREEN_COLOR,
             child: Text(
               '$i',
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
           );
         } else {
