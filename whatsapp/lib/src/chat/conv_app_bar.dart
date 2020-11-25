@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:whatsapp/src/calls/video_call.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
 import 'package:whatsapp/src/utils/user.dart';
 
@@ -48,7 +50,13 @@ class ConvAppBar extends StatelessWidget implements PreferredSizeWidget {
             icon: Icon(Icons.videocam_outlined),
             color: GREEN_COLOR,
             iconSize: 30,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                CupertinoPageRoute(
+                  builder: (_) => VideoCallScreen(user),
+                ),
+              );
+            },
           ),
           IconButton(
             icon: Icon(Icons.more_vert),
