@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:whatsapp/src/calls/call_list.dart';
 import 'package:whatsapp/src/chat/chat_list.dart';
 import 'package:whatsapp/src/chat/chats_calls_header.dart';
+import 'package:whatsapp/src/chat/new_chat.dart';
 import 'package:whatsapp/src/common/appbar.dart';
 import 'package:whatsapp/src/status/status.dart';
 import 'package:whatsapp/src/utils/data.dart';
@@ -63,7 +65,15 @@ class _HomepageState extends State<Homepage> {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: null,
+        onPressed: currentIndex == 0
+            ? () {
+                Navigator.of(context).push(
+                  CupertinoPageRoute(
+                    builder: (_) => NewChatScreen(ALL_USERS),
+                  ),
+                );
+              }
+            : null,
         tooltip: 'Increment',
         icon: Icon(currentIndex == 0 ? Icons.message : Icons.phone),
         label: Text(currentIndex == 0 ? 'New Chat' : 'New Call'),

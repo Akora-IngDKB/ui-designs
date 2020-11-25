@@ -7,8 +7,9 @@ import 'package:whatsapp/src/utils/user.dart';
 
 class ConversationScreen extends StatelessWidget {
   final User user;
+  final bool isNewChat;
 
-  const ConversationScreen(this.user);
+  const ConversationScreen(this.user, {this.isNewChat = false});
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +24,16 @@ class ConversationScreen extends StatelessWidget {
           ),
           Column(
             children: [
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 50,
-                  itemBuilder: (_, i) => ListTile(title: Text('Message $i')),
+              if (!isNewChat)
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: 50,
+                    itemBuilder: (_, i) => ListTile(title: Text('Message $i')),
+                  ),
                 ),
-              ),
+              if (isNewChat) Spacer(),
               _InputArea(),
-              SizedBox(height: 4),
+              SizedBox(height: 8),
             ],
           ),
         ],
