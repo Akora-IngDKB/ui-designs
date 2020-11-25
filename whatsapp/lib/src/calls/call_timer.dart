@@ -12,27 +12,26 @@ class CallTimer extends StatefulWidget {
 }
 
 class _CallTimerState extends State<CallTimer> {
-  int hours = 0;
-  int minutes = 0;
-  int seconds = 0;
+  static int hours = 0;
+  static int minutes = 0;
   Timer timer;
-  int timeElapsedSecs = 0;
+  static int seconds = 0;
 
   void evaluateTime() {
     timer = Timer.periodic(Duration(seconds: 1), (_) {
-      timeElapsedSecs++;
+      seconds++;
 
       if (mounted) {
         setState(() {
-          if (timeElapsedSecs == 60) {
+          if (seconds == 60) {
             minutes++;
-            timeElapsedSecs = 0;
+            seconds = 0;
           }
           if (minutes == 60) {
             hours++;
             minutes = 0;
           }
-          if (timeElapsedSecs == 60) {
+          if (seconds == 60) {
             minutes++;
           }
         });
@@ -41,8 +40,8 @@ class _CallTimerState extends State<CallTimer> {
   }
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
 
     evaluateTime();
   }
@@ -50,6 +49,10 @@ class _CallTimerState extends State<CallTimer> {
   @override
   void dispose() {
     timer.cancel();
+
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
 
     super.dispose();
   }
@@ -72,10 +75,10 @@ class _CallTimerState extends State<CallTimer> {
       m = '$minutes';
     }
 
-    if (timeElapsedSecs < 10) {
-      s = '0$timeElapsedSecs';
+    if (seconds < 10) {
+      s = '0$seconds';
     } else {
-      s = '$timeElapsedSecs';
+      s = '$seconds';
     }
 
     return Text(
