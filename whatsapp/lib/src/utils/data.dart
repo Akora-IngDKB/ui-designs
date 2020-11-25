@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:whatsapp/src/utils/message.dart';
 import 'package:whatsapp/src/utils/user.dart';
 
 final random = Random(TimeOfDay.now().hour);
@@ -63,3 +64,10 @@ final ALL_USERS = [
     statusCount: 5,
   ),
 ]..shuffle(random);
+
+const MESSAGES = [
+  Message(message: 'Hello there', isFromMe: true),
+  Message(message: 'Hey big man', isFromMe: false),
+  Message(message: 'Long time, no see.\nHow are you doing?', isFromMe: true),
+  Message(message: "I'm doing very well. Yourself?", isFromMe: false),
+];

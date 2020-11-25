@@ -1,7 +1,9 @@
 import 'dart:math';
 
+import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp/src/chat/conv_app_bar.dart';
+import 'package:whatsapp/src/utils/data.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
 import 'package:whatsapp/src/utils/user.dart';
 
@@ -27,8 +29,34 @@ class ConversationScreen extends StatelessWidget {
               if (!isNewChat)
                 Expanded(
                   child: ListView.builder(
-                    itemCount: 50,
-                    itemBuilder: (_, i) => ListTile(title: Text('Message $i')),
+                    itemCount: MESSAGES.length,
+                    itemBuilder: (_, i) {
+                      return Bubble(
+                        nip: MESSAGES[i].isFromMe
+                            ? BubbleNip.rightTop
+                            : BubbleNip.leftTop,
+                        color: MESSAGES[i].isFromMe
+                            ? GREEN_COLOR.withOpacity(0.95)
+                            : Colors.white,
+                        alignment: MESSAGES[i].isFromMe
+                            ? Alignment.centerRight
+                            : Alignment.centerLeft,
+                        child: Text(
+                          MESSAGES[i].message,
+                          style: TextStyle(
+                            color: MESSAGES[i].isFromMe
+                                ? Colors.white
+                                : Colors.black,
+                            fontSize: 16,
+                          ),
+                        ),
+                        padding: const BubbleEdges.all(12),
+                        margin: const BubbleEdges.symmetric(
+                          vertical: 8,
+                          horizontal: 4,
+                        ),
+                      );
+                    },
                   ),
                 ),
               if (isNewChat) Spacer(),
