@@ -1,10 +1,12 @@
 # UI Design Clones
 This repo contains UI Designs from popular inspiration websites that I have cloned.
 
+<img src='ui_design_concepts.png' alt='UI Design Concepts By Akora Ing. DKB'/>
+
 ## Content
-1. [Onboarding](https://github.com/Akora-IngDKB/ui-designs/tree/master/onboarding)
-2. [Social App](https://github.com/Akora-IngDKB/ui-designs/tree/master/social_app)
-2. [WhatsApp](https://github.com/Akora-IngDKB/ui-designs/tree/master/whatsapp)
+1. [Onboarding](https://github.com/Akora-IngDKB/ui-designs/tree/main/onboarding)
+2. [Social App](https://github.com/Akora-IngDKB/ui-designs/tree/main/social_app)
+2. [WhatsApp](https://github.com/Akora-IngDKB/ui-designs/tree/main/whatsapp)
 
 <br>
 <hr>
