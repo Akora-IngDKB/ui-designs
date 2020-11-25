@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:whatsapp/src/calls/call_list.dart';
 import 'package:whatsapp/src/chat/chat_list.dart';
 import 'package:whatsapp/src/chat/chats_calls_header.dart';
@@ -23,6 +24,18 @@ class _HomepageState extends State<Homepage> {
     setState(() {
       currentIndex = index;
     });
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.white,
+        statusBarIconBrightness: Brightness.dark,
+      ),
+    );
   }
 
   @override
