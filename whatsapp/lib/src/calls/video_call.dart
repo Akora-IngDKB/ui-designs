@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:whatsapp/src/calls/call_timer.dart';
 import 'package:whatsapp/src/utils/data.dart';
 import 'package:whatsapp/src/utils/theme_values.dart';
 import 'package:whatsapp/src/utils/user.dart';
@@ -141,6 +142,7 @@ class _NameToolbar extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
+                CallTimer(),
               ],
             ),
           ),
