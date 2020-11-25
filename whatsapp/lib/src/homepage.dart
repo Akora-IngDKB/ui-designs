@@ -20,6 +20,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  final pageController = PageController();
   int currentIndex = 0;
 
   void onPageChanged(int index) {
@@ -53,10 +54,35 @@ class _HomepageState extends State<Homepage> {
         children: <Widget>[
           StatusList(ALL_USERS),
           SizedBox(height: 24),
-          ChatCallHeader(isChatSelected: currentIndex == 0),
+          ChatCallHeader(
+            isChatSelected: currentIndex == 0,
+            onChatsTapped: () {
+              pageController.animateToPage(
+                0,
+                curve: Curves.easeInOut,
+                duration: Duration(milliseconds: 350),
+              );
+
+              setState(() {
+                currentIndex = 0;
+              });
+            },
+            onCallsTapped: () {
+              pageController.animateToPage(
+                1,
+                curve: Curves.easeInOut,
+                duration: Duration(milliseconds: 350),
+              );
+
+              setState(() {
+                currentIndex = 1;
+              });
+            },
+          ),
           SizedBox(height: 24),
           Expanded(
             child: PageView.builder(
+              controller: pageController,
               onPageChanged: onPageChanged,
               itemCount: pages.length,
               itemBuilder: (_, i) => pages[i],
