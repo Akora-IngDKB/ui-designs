@@ -31,7 +31,7 @@ class CustomAppBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ProgressContainer(
-                percentComplete: 77,
+                percentComplete: 75.0,
                 bgBorderColor: Colors.transparent,
                 progressColor: RED_ORANGE,
                 contentPadding: const EdgeInsets.all(10),
@@ -56,8 +56,8 @@ class CustomAppBar extends StatelessWidget {
                   SizedBox(height: 12),
                   Text(
                     'Project Manager',
-                    style: TextStyle(fontSize: 18, color: Colors.black87),
-                  )
+                    style: TextStyle(fontSize: 18, color: Colors.black54),
+                  ),
                 ],
               )
             ],

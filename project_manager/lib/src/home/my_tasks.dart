@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project_manager/src/today/today.dart';
+import 'package:project_manager/src/util/navigator_util.dart';
 import 'package:project_manager/src/util/theme_values.dart';
 
 class MyTasks extends StatelessWidget {
@@ -15,7 +17,9 @@ class MyTasks extends StatelessWidget {
             child: Icon(Icons.calendar_today_outlined),
             elevation: 0,
             heroTag: Key('calendar'),
-            onPressed: null,
+            onPressed: () {
+              AppNavigator.goToPage(context, TodayPage());
+            },
             backgroundColor: GREEN,
           ),
         ),

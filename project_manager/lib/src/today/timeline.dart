@@ -96,11 +96,14 @@ class Timeline extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: Row(
             children: [
-              Text(
-                '$h $suffix',
-                style: TextStyle(color: Colors.black54, fontSize: 16),
+              Expanded(
+                flex: 2,
+                child: Text(
+                  '$h $suffix',
+                  style: TextStyle(color: Colors.black54, fontSize: 16),
+                ),
               ),
-              Expanded(child: child),
+              Expanded(flex: 15, child: child),
             ],
           ),
         );
