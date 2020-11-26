@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:project_manager/src/new_task/task_bar.dart';
 import 'package:project_manager/src/util/theme_values.dart';
 
 class NewTask extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: ORANGE,
+        statusBarIconBrightness: Brightness.dark,
+      ),
+    );
+
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

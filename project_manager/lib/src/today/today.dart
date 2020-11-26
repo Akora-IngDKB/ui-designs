@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:project_manager/src/new_task/new_task.dart';
 import 'package:project_manager/src/today/row_calendar.dart';
 import 'package:project_manager/src/today/timeline.dart';
@@ -8,6 +9,13 @@ import 'package:project_manager/src/util/theme_values.dart';
 class TodayPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: LIGHT_ORANGE,
+        statusBarIconBrightness: Brightness.dark,
+      ),
+    );
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
