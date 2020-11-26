@@ -5,8 +5,9 @@ This repo contains UI Designs from popular inspiration websites that I have clon
 
 ## Content
 1. [Onboarding](https://github.com/Akora-IngDKB/ui-designs/tree/main/onboarding)
-2. [Social App](https://github.com/Akora-IngDKB/ui-designs/tree/main/social_app)
-2. [WhatsApp](https://github.com/Akora-IngDKB/ui-designs/tree/main/whatsapp)
+2. [Project Manager](https://github.com/Akora-IngDKB/ui-designs/tree/main/project_manager)
+3. [Social App](https://github.com/Akora-IngDKB/ui-designs/tree/main/social_app)
+4. [WhatsApp](https://github.com/Akora-IngDKB/ui-designs/tree/main/whatsapp)
 
 <br>
 <hr>
