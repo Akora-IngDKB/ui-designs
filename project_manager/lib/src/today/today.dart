@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:project_manager/src/new_task/new_task.dart';
 import 'package:project_manager/src/today/row_calendar.dart';
 import 'package:project_manager/src/today/timeline.dart';
+import 'package:project_manager/src/util/navigator_util.dart';
 import 'package:project_manager/src/util/theme_values.dart';
 
 class TodayPage extends StatelessWidget {
@@ -35,8 +37,13 @@ class TodayPage extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  child: Text('Add Task'),
-                  onPressed: () {},
+                  child: Text(
+                    'Add Task',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  onPressed: () {
+                    AppNavigator.goToPage(context, NewTask());
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(GREEN),
                     elevation: MaterialStateProperty.all(0),
@@ -45,7 +52,7 @@ class TodayPage extends StatelessWidget {
                       const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
                     ),
                   ),
-                )
+                ),
               ],
             ),
             Text(
