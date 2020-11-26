@@ -133,8 +133,6 @@ class _DashedDivider extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 0.6;
 
-    final values = [0, 1, 2, 3, 4];
-
     for (var i in List<int>.generate((size.width / 20).floor(), (_) => _)) {
       canvas.drawLine(
         Offset(calcdX(i, isX: true), 0),

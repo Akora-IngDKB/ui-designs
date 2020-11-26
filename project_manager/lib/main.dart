@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: BLACK),
           color: Colors.transparent,
         ),
+        fontFamily: 'Poppins',
         scaffoldBackgroundColor: LIGHT_ORANGE,
       ),
       home: Homepage(),

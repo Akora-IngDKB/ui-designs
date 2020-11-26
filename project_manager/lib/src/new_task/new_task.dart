@@ -83,7 +83,6 @@ class NewTask extends StatelessWidget {
               style: TextStyle(
                 color: BLACK,
                 fontSize: 17,
-                letterSpacing: 1.5,
                 height: 1.28,
                 wordSpacing: 2,
               ),
