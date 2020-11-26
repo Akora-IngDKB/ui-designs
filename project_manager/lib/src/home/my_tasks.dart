@@ -12,7 +12,7 @@ class MyTasks extends StatelessWidget {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           trailing: FloatingActionButton(
-            child: Icon(Icons.event),
+            child: Icon(Icons.calendar_today_outlined),
             elevation: 0,
             heroTag: Key('calendar'),
             onPressed: null,
@@ -20,13 +20,13 @@ class MyTasks extends StatelessWidget {
           ),
         ),
         ListTile(
-          leading: FloatingActionButton(
-            child: Icon(Icons.access_time, size: 20),
-            elevation: 0,
-            heroTag: Key('todo'),
-            onPressed: null,
-            mini: true,
+          leading: CircleAvatar(
             backgroundColor: RED_ORANGE,
+            child: Icon(
+              Icons.access_time_outlined,
+              size: 20,
+              color: Colors.white,
+            ),
           ),
           title: Text(
             'To Do',
@@ -35,13 +35,13 @@ class MyTasks extends StatelessWidget {
           subtitle: Text('5 tasks now • 1 started'),
         ),
         ListTile(
-          leading: FloatingActionButton(
-            child: Icon(Icons.refresh_outlined, size: 20),
-            elevation: 0,
-            heroTag: Key('in-progress'),
-            onPressed: null,
-            mini: true,
-            backgroundColor: Colors.orangeAccent.withOpacity(0.7),
+          leading: CircleAvatar(
+            backgroundColor: ORANGE,
+            child: Icon(
+              Icons.ac_unit_outlined,
+              size: 20,
+              color: Colors.white,
+            ),
           ),
           title: Text(
             'In Progress',
@@ -50,13 +50,13 @@ class MyTasks extends StatelessWidget {
           subtitle: Text('1 task now • 1 started'),
         ),
         ListTile(
-          leading: FloatingActionButton(
-            child: Icon(Icons.fast_forward_outlined, size: 20),
-            elevation: 0,
-            heroTag: Key('done'),
-            onPressed: null,
+          leading: CircleAvatar(
             backgroundColor: LIGHT_BLUE,
-            mini: true,
+            child: Icon(
+              Icons.fast_forward_outlined,
+              size: 20,
+              color: Colors.white,
+            ),
           ),
           title: Text(
             'Done',

@@ -6,9 +6,9 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 225,
+      height: 250,
       width: double.maxFinite,
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: ORANGE,
         borderRadius: BorderRadius.only(
@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
       ),
       child: Column(
         children: [
-          SizedBox(height: 16),
+          SizedBox(height: 24),
           Row(
             children: [
               Icon(Icons.format_align_left),
@@ -36,7 +36,7 @@ class CustomAppBar extends StatelessWidget {
                 progressColor: RED_ORANGE,
                 contentPadding: const EdgeInsets.all(10),
                 child: CircleAvatar(
-                  radius: 42,
+                  radius: 50,
                   backgroundImage:
                       AssetImage('assets/images/oladimeji_odunsi.jpg'),
                 ),
@@ -47,7 +47,11 @@ class CustomAppBar extends StatelessWidget {
                 children: [
                   Text(
                     'Akora Ing. DKB',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      color: BLACK,
+                    ),
                   ),
                   SizedBox(height: 12),
                   Text(

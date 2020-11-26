@@ -15,6 +15,7 @@ class Homepage extends StatelessWidget {
             MyTasks(),
             SizedBox(height: 32),
             ActiveProjects(),
+            SizedBox(height: 16),
           ],
         ),
       ),
