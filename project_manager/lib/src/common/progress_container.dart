@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class ProgressContainer extends StatelessWidget {
+class ProgressContainer extends StatefulWidget {
   /// Measure on the percentage scale (0 - 100).
   final double percentComplete;
 
@@ -30,17 +30,51 @@ class ProgressContainer extends StatelessWidget {
   });
 
   @override
+  _ProgressContainerState createState() => _ProgressContainerState();
+}
+
+class _ProgressContainerState extends State<ProgressContainer>
+    with TickerProviderStateMixin {
+  Animation<double> animation;
+  AnimationController controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 500),
+    );
+
+    animation = Tween<double>(begin: 0.0, end: widget.percentComplete)
+        .animate(controller)
+          ..addListener(() {
+            setState(() {});
+          });
+
+    controller.forward();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return CustomPaint(
       painter: _CustomBorderPainter(
-        percentComplete: percentComplete,
-        bgBorderColor: bgBorderColor,
-        progressColor: progressColor,
-        strokeWidth: strokeWidth,
+        percentComplete: animation.value,
+        bgBorderColor: widget.bgBorderColor,
+        progressColor: widget.progressColor,
+        strokeWidth: widget.strokeWidth,
       ),
       child: Padding(
-        padding: contentPadding,
-        child: child,
+        padding: widget.contentPadding,
+        child: widget.child,
       ),
     );
   }
